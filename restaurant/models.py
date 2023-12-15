@@ -6,12 +6,12 @@ class Booking(models.Model):
     no_of_guests = models.IntegerField()
     bookingDate = models.DateField()
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.name
 
 class Menu(models.Model):
     title = models.CharField(max_length= 255)
-    price = models.DecimalField( max_digits=2, decimal_places=2)
+    price = models.DecimalField( max_digits=5, decimal_places=2)
     inventory = models.IntegerField()
 
     def __str__(self):
