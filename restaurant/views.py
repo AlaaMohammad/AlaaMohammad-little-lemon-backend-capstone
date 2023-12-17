@@ -1,3 +1,5 @@
+from django.shortcuts import render
+
 from rest_framework.generics import ListCreateAPIView,RetrieveAPIView,DestroyAPIView
 from rest_framework.viewsets import ModelViewSet
 
@@ -8,6 +10,9 @@ from .models import Booking , Menu
 from .serializers import BookingSerializer, MenuSerializer
 # Create your views here.
 
+
+def index(request):
+   return render(request,'index.html',{})
 
 # class bookingView(APIView):
 

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Lemon</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+      <header>
+      <img
+        className="logo"
+        src="../assets/img/logo.png"
+        alt="Little Lemon Resturant Logo"
+      />
+      <nav>
+        <ul className="navbar">
+          <li className="nav-item">
+            <a href="#">Home</a>
+          </li>
+          <li className="nav-item">
+            <a href="#">About</a>
+          </li>
+          <li className="nav-item">
+            <a href="#">Menu</a>
+          </li>
+          <li className="nav-item">
+            <a href="#">Reservation</a>
+          </li>
+          <li className="nav-item">
+            <a href="#">Order</a>
+          </li>
+          <li className="nav-item">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+     <section className="hero">
+      <div className="hero-text">
+        <h1>Little Lemon</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio facere
+          culpa hic nisi debitis impedit saepe veniam incidunt amet! Eveniet,
+          harum quisquam animi veritatis culpa vitae unde possimus quia fugiat?
+        </p>
+        <a className="btn btn-primary" href="#">
+          Reserve a Table
+        </a>
+      </div>
+      <div className="hero-img">
+        <img className="hero-img" src="./assets/img/hero.png" alt="" />
+      </div>
+    </section>
+       <section className='menu-section'>
+      <h2>This Week Specials!</h2>
+      <a className="btn btn-secondary" href="">
+        Online Menu
+      </a>
+      <div className="menu-container">
+        {
+          data.map( item =>(
+        <article className='menu-item'>
+          <div className="menu-img">
+
+          <img src={`./assets/img/food/${item.img}`} alt="" />
+          </div>
+          <h2>{item.name}</h2>
+          <p>{item.price}</p>
+          <p>
+            {item.description}
+          </p>
+        </article>
+
+          ))
+        }
+      </div>
+    </section>
+     <footer>
+      <div className="footer-logo">
+        <img src="/assets/img/logo.png" alt="" />
+      </div>
+      <div className="footer-navigation">
+        <h6>Navigation</h6>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Reservation</a>
+          </li>
+          <li>
+            <a href="#">Order</a>
+          </li>
+        </ul>
+      </div>
+      <div className='footer-contact'>
+        <h6> Contact </h6>
+        <p>
+          2395 Maldove Way, Chicago Illinois (629)-243-6827 info@littlelemon.com
+        </p>
+      </div>
+      <div className='footer-connect'>
+        <h6> Connect </h6>
+        <p>Facebook</p>
+        <p>instegram</p>
+      </div>
+    </footer>
+</body>
+</html>
